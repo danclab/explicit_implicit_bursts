@@ -340,8 +340,7 @@ run_burst_rate_trend_analysis <- function(varname, use_next_trial = TRUE) {
 
 
 
-#vars <- c('aim_vis_abs_err', 'reach_vis_abs_err', 'reach_dur', 'reach_rt')
-vars <- c('reach_vis_abs_err', 'reach_rt')
+vars <- c('aim_vis_abs_err', 'reach_vis_abs_err', 'reach_dur', 'reach_rt')
 
 for (var in vars) {
   run_trial_permutation(var, use_next_trial = TRUE)
