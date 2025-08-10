@@ -298,7 +298,7 @@ run_beta_power_trend_analysis <- function(varname, use_next_trial = TRUE) {
     }
 
     trends_df <- bind_rows(trends) %>%
-      rename(estimate = burst_count.trend)
+      rename(estimate = beta_power.trend)
 
     suffix <- if (use_next_trial) paste0(varname, "_next_trial") else varname
     write_csv(trends_df, paste0("output/beta_power_", epoch, "_", suffix, ".csv"))
