@@ -145,7 +145,7 @@ run_trial_permutation <- function(varname, use_next_trial = TRUE, min_cluster_si
         win_results<-run_window_lmer(epoch, varname, use_next_trial = use_next_trial, time_window = c(start, end))
         # --- ANOVA (Type III) ---
         aov_tab <- win_results$Anova
-        int_row <- grep("^group:.*mean_power$", rownames(aov_tab))
+        int_row <- grep("^group:mean_power$", rownames(aov_tab))
 
         interaction_chisq <- aov_tab$Chisq[int_row]
         interaction_dof   <- aov_tab$Df[int_row]
